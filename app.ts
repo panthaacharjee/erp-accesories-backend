@@ -50,6 +50,6 @@ app.use("/api/v1", hr)
 
 
 
-app.use(errorMiddleware);
+// app.use(errorMiddleware);
 
 module.exports = app;
