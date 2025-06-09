@@ -1,6 +1,6 @@
-const server  = require("./app")
+const server  = require("./app.ts")
 const dotenv = require("dotenv")
-const conncetDB = require("./src/config/Datebase")
+const conncetDB = require("./src/config/Datebase.ts")
 const cloudinary = require("cloudinary");
 
 dotenv.config({path:"./src/config/config.env"})
