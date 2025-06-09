@@ -1,5 +1,5 @@
 import {  NextFunction, Request, Response } from "express";
-import ErrorHandler from "../utils/errorhandler";
+import ErrorHandler from "../utils/errorhandler.js";
 
 module.exports = (err:Error, req:Request, res:Response, next:NextFunction) => {
   err.message = err.message || "Internal Server Error";

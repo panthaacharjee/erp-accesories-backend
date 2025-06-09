@@ -2,12 +2,11 @@ import { Request, Response, NextFunction } from "express";
 const fs = require("fs");
 
 /* ======================== MODELS ================== */
-import User from "../models/Employee/UserModel";
+import User from "../models/Employee/UserModel.js";
 
 /* =================== UTILS ======================= */
-import ErrorHandler from "../utils/errorhandler";
-import user from "../models/Employee/UserModel";
-import generatePDFFromUrl from "../utils/generatePdf";
+import ErrorHandler from "../utils/errorhandler.js";
+import generatePDFFromUrl from "../utils/generatePdf.js";
 
 /* =================== MIDDLEWARE ======================= */
 const catchAsyncError = require("../middleware/catchAsyncError.ts")

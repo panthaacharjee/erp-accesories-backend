@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
-import ErrorHandler from "../utils/errorhandler";
-import User from "../models/Employee/UserModel";
+import ErrorHandler from "../utils/errorhandler.js";
+import User from "../models/Employee/UserModel.js";
 const jwt = require("jsonwebtoken")
 const catchAsyncError = require("../middleware/catchAsyncError.ts")
 

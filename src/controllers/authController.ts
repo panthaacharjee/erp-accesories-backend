@@ -1,8 +1,8 @@
 import { Request, Response, NextFunction } from "express";
 const catchAsyncError = require("../middleware/catchAsyncError.ts")
-import User from "../models/Employee/UserModel";
-import ErrorHandler from "../utils/errorhandler";
-import hashPassword from "../utils/HashPassword";
+import User from "../models/Employee/UserModel.js";
+import ErrorHandler from "../utils/errorhandler.js";
+import hashPassword from "../utils/HashPassword.js";
 const {comparePassword} = require("../utils/ComparePassword.ts")
 const sendToken = require('../utils/jwtToken.ts')
 const token = require("../utils/Token.ts")

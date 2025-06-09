@@ -1,7 +1,7 @@
 const expressRoute = require("express");
 const router = expressRoute.Router();
 const { registerEmployee, loginUser, logout, getLoginHistory, updatePassword, getUser} = require("../controllers/authController.ts")
-import { captureIp } from "../middleware/captureIp";
+import { captureIp } from "../middleware/captureIp.js";
 const {isAuthenticatedUser} = require("../middleware/auth.ts")
 
 /* ====================== USER AUTHENTICATION ======================= */
