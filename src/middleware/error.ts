@@ -1,21 +1,15 @@
-import { NextFunction, Request, Response } from "express";
+import {  NextFunction, Request, Response } from "express";
 import ErrorHandler from "../utils/errorhandler";
 
-module.exports = (err:any, req:Request, res:Response, next:NextFunction) => {
-  err.statusCode = err.statusCode || 500;
+module.exports = (err:Error, req:Request, res:Response, next:NextFunction) => {
   err.message = err.message || "Internal Server Error";
 
   //Wrong Mongodb Id Error
   if (err.name === "CastError") {
-    const message = `Resource Not Found. Invalid : ${err.path}`;
+    const message = `Resource Not Found. Invalid `;
     return ErrorHandler(message, 400, res, next);
   }
 
-  //Mongodb duplicate key error
-  if (err.code === 11000) {
-    const message = `Duplicate ${Object.keys(0)} Entered`;
-    return ErrorHandler(message, 400, res, next);
-  }
 
   //Wrong JWT  Error
   if (err.name === "JsonWebTokenError") {
@@ -29,7 +23,7 @@ module.exports = (err:any, req:Request, res:Response, next:NextFunction) => {
     return ErrorHandler(message, 400, res, next);
   }
 
-  res.status(err.statusCode).json({
+  res.json({
     success: false,
     message: err.message,
   });
