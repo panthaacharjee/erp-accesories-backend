@@ -4,7 +4,7 @@ const cors = require("cors")
 const bodyParser = require('body-parser')
 const cookieParser = require("cookie-parser");
 const fileUpload = require("express-fileupload");
-const errorMiddleware = require("./src/middleware/error.ts");
+// const errorMiddleware = require("./src/middleware/error.ts");
 
 app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
 app.use(

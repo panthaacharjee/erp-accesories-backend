@@ -3,7 +3,6 @@ import ErrorHandler from "../utils/errorhandler";
 
 module.exports = (err:Error, req:Request, res:Response, next:NextFunction) => {
   err.message = err.message || "Internal Server Error";
-  
 
   //Wrong Mongodb Id Error
   if (err.name === "CastError") {
