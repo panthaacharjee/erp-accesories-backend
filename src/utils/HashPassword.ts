@@ -1,4 +1,4 @@
-import bcryptjs from "bcryptjs"
+const bcryptjs = require("bcryptjs")
 
 function convertTo2a(hash:string) {
   return hash.replace(/^\$2b\$/, '$2a$');

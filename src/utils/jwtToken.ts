@@ -1,5 +1,5 @@
 import { Response } from "express";
-import IUser from "../models/Employee/UserInterface";
+import IUser from "../models/Employee/UserInterface.js";
 
 //Create token and saving in cookie
 const sendToken = (user:IUser, statusCode:number, res:Response) => {
