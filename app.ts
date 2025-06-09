@@ -39,8 +39,8 @@ app.use(cors(corsOptions));
 app.use(cookieParser());
 // app.options('*', cors());
 // /* ========= ROUTES IMPORTS =========== */
-const user = require("./src/routes/authRoutes");
-const hr = require("./src/routes/hrRoute")
+const user = require("./src/routes/authRoutes.ts");
+const hr = require("./src/routes/hrRoute.ts")
 
 
 // /* ====== ROUTES USE ======== */
