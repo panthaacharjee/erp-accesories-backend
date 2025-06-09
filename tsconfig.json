@@ -1,18 +1,13 @@
 {
   "compilerOptions": {
-    "allowJs": true,        // Allow JS file imports
-    "checkJs": true,        // Optional: Enable JS type checking
     "target": "ES2020",
     "module": "commonjs",
-    "outDir": "./dist",
-    "rootDir": "./src",
+    "outDir": "dist",
+    "rootDir": "src",
     "strict": true,
     "esModuleInterop": true,
-    "skipLibCheck": true,
-     "types": ["node"],
-      "typeRoots": ["./node_modules/@types", "./src/types"],
-    // "forceConsistentCasingInFileNames": true
+    "skipLibCheck": true
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]
 }
