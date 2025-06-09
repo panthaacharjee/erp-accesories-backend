@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from "express";
 import ErrorHandler from "../utils/errorhandler";
 import User from "../models/Employee/UserModel";
 const jwt = require("jsonwebtoken")
-const catchAsyncError = require("../middleware/catchAsyncError")
+const catchAsyncError = require("../middleware/catchAsyncError.ts")
 
 declare global {
   namespace Express {

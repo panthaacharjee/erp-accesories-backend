@@ -1,11 +1,11 @@
 import { Request, Response, NextFunction } from "express";
-const catchAsyncError = require("../middleware/catchAsyncError")
+const catchAsyncError = require("../middleware/catchAsyncError.ts")
 import User from "../models/Employee/UserModel";
 import ErrorHandler from "../utils/errorhandler";
 import hashPassword from "../utils/HashPassword";
-const {comparePassword} = require("../utils/ComparePassword")
-const sendToken = require('../utils/jwtToken')
-const token = require("../utils/Token")
+const {comparePassword} = require("../utils/ComparePassword.ts")
+const sendToken = require('../utils/jwtToken.ts')
+const token = require("../utils/Token.ts")
 
 
 /* =====================================================================================================*/

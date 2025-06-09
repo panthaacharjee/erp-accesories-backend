@@ -10,7 +10,7 @@ import user from "../models/Employee/UserModel";
 import generatePDFFromUrl from "../utils/generatePdf";
 
 /* =================== MIDDLEWARE ======================= */
-const catchAsyncError = require("../middleware/catchAsyncError")
+const catchAsyncError = require("../middleware/catchAsyncError.ts")
 
 
 

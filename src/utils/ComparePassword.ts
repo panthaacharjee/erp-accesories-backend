@@ -1,5 +1,5 @@
 const bcryptjs = require("bcryptjs")
-const catchAsyncError  = require("../middleware/catchAsyncError")
+const catchAsyncError  = require("../middleware/catchAsyncError.ts")
 
 exports.comparePassword = async(enteredPassword:string, userPassword:string)=>{
   const match = await bcryptjs.compare(enteredPassword, userPassword);
